@@ -17,7 +17,7 @@ vim avlreplace.cpp
 sh start.sh 50 4000
 ```
 
-If your avl tree isn't properly balanced the program should output the unbalanced node with the tested values.
+If your avl tree isn't properly balanced the program should output the unbalanced node with the tested values in a file named KO.txt.
 
 # Requirement
 
