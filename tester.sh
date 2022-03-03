@@ -14,18 +14,26 @@ function HELP
 {
 	if [ "$1" == "--help" ];
 	then
-		printf "$YELLOW ------> $GREEN  argmount 1 is name of your root(avl_tree) $RESET \n "
-		printf "$YELLOW ------> $GREEN  argmount 2 is name of your height(avl_tree) $RESET \n "
-		printf "$YELLOW ------> $GREEN  argmount 1 is name of your right-node(avl_tree) $RESET \n "
-		printf "$YELLOW ------> $GREEN  argmount 1 is name of your left-node(avl_tree) $RESET \n "
+		printf "$YELLOW ------> $GREEN  argmount 1 is name of your root(avl_tree) ex : test.root ==> pointer of ur node :D $RESET \n "
+		printf "$YELLOW ------> $GREEN  argmount 2 is name of your height(avl_tree) ex : just name for ur name height $RESET \n "
+		printf "$YELLOW ------> $GREEN  argmount 3 is name of your right-node(avl_tree) ex: just name of  right-node $RESET \n "
+		printf "$YELLOW ------> $GREEN  argmount 4 is name of your left-node(avl_tree) ex: just name  of left-node  $RESET \n "
+		printf "$YELLOW ------> $GREEN  argmount 5 is name of your hederfile-name(avl_tree) ex: just name  of header-file ex2: my-avl.hpp  $RESET \n "
+		printf "$YELLOW after all change u can run test \n"
 	fi
 }
 
 
-# function replace
-# {
-
-# }
+function replace
+{
+	printf " $RESET ****************** start change name of  test_avl "
+	if [ -z "$5" ];
+	then
+		printf "\n $RED ---------------------------  ERROR : one of argmount  is empty\n $RESET"
+	else 
+		printf "start play"
+	fi
+}
 
 
 
@@ -48,9 +56,12 @@ function test_avl
 
 function main
 {
-	printf "$RED##############----- $RESET $YELLOW add --help for info $RESET $RED-----##########################$RESET\n"
+	printf "$RED##################----- $RESET $YELLOW add --help for more info $RESET $RED-----##########################$RESET\n"
 	HELP $1
+	replace $1 $2 $3 $4 $5
+	printf "$RED##################----- $RESET $YELLOW end :p $RESET $RED-----##########################$RESET\n"
+
 }
 
 
-main $1 $2 $3 $4
+main $1 $2 $3 $4 $5
