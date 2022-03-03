@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "avl.hpp"
+#include "$6"
 
 template<class F>
 int calheight(F *p)
