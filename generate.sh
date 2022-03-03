@@ -80,7 +80,7 @@ void check_balance(F *s)
   int bal = ::calheight(s->$6) - ::calheight(s->$5);
   if (bal >= 2 || bal <= -2)
   {
-	std::cout << \"KO: \" << \" unbalanced tree at node \" << s->$7.first << std::endl;
+	std::cerr << \"KO: \" << \" unbalanced tree at node \" << s->$7.first << std::endl;
 	return ;
   }
 }

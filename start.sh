@@ -18,7 +18,13 @@ function test_avl
 	do
 		ARG=$(python3 ./values.py $2)
 		printf "$YELLOW%s%d$RESET\n" "test for ===> " "$2"
-		./avldestroyer $ARG
+		./avldestroyer $ARG 2>KO.txt
+		TEST=$(cat KO.txt | wc -l)
+		if [ $TEST != 0 ]; then
+			echo "$ARG" >> KO.txt
+			printf "\n $RED KO: check KO.txt for more info\n\n\n $RESET"
+		   break ;
+		fi
 		i=$[$i+1];
 	done
 }
