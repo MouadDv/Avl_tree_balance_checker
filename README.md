@@ -13,7 +13,7 @@ sh generate.sh --help
 After providing all the required arguments don't forget to edit avlreplace.cpp line 52 to properly insert new nodes in your tree.
 
 ```
-vim avlreplace.cpp
+vim +52 avlreplace.cpp
 sh start.sh 50 4000
 ```
 
